@@ -4,9 +4,11 @@ import java.util.StringTokenizer;
 
 public class Tree {
     Node root;
+    Node firstLeaf;
 
     public Tree() {
         root = null;
+        firstLeaf=null;
     }
 
     public boolean isEmpty() {
@@ -18,7 +20,9 @@ public class Tree {
     }
 
     public void insert(String line) {
-        String valueAtTheNode, valueAtLeft, valueAtRight;
+        String valueAtTheNode;
+        String valueAtLeft;
+        String valueAtRight;
         String[] arr = line.split("\\s");
         valueAtTheNode = arr[0];
         valueAtLeft = arr[1];
@@ -66,4 +70,65 @@ alternate way of assigning value
         }
         return 0;
     }
+    public String getNames(char c){
+
+        if(!isEmpty()){
+            return  root.getNames(c);
+        }
+        return null;
+    }
+
+    public int getHeight() {
+
+        if(!isEmpty()){
+            return root.getHeight();
+        }
+        return 0;
+    }
+
+    public Node getFirstLeaf(){
+        return firstLeaf;
+    }
+    public Node getNextLeaf(Node n){
+        if(n.nextLeaf==null){
+            return null;
+        }else{
+          return   n.nextLeaf;
+        }
+    }
+
+
+    public void setUpLeafIterator() {
+        if(!isEmpty()){
+            firstLeaf=root.setUpLeafIterator(firstLeaf);
+        }
+    }
+//    public void setUpIterator(){
+//        if(!isEmpty()){
+//            firstLeaf=root.setUpLeaf2(null);
+//        }else{
+//            return;
+//        }
+//    }
+
+    public void bstInsert(String s){
+        if(root==null){
+            root = new Node(s);
+        }else{
+            root.bstInsert(s);
+        }
+    }
+
+    public void bstFind(String s){
+        if(root==null){
+            root = new Node(s);
+        }else{
+            root.bstFind(s);
+        }
+    }
+
+    public void findTheSmallest(String s){
+
+    }
+
 }

@@ -1,6 +1,4 @@
 
 ^
-java:S1126"AReplace this if-then-else statement by a single return statement.(ß¼Ëœ8•À”ğ³1
-j
-java:S1659"HDeclare "valueAtLeft" and all following declarations on a separate line.(ÖÄ¦ûÿÿÿÿ8–À”ğ³1
-]	java:S125"<This block of commented-out lines of code should be removed.(èãõËüÿÿÿÿ8˜À”ğ³1
+java:S1126"AReplace this if-then-else statement by a single return statement.(ß¼Ëœ8¥õ°Â´1
+]	java:S125""<This block of commented-out lines of code should be removed.(èãõËüÿÿÿÿ8§õ°Â´1
